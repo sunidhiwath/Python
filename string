@@ -1,0 +1,139 @@
+#31)
+s = input("Enter a string: ")
+
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+#32)
+s = input("Enter a string: ")
+
+upper = 0
+lower = 0
+
+for ch in s:
+    if ch.isupper():
+        upper += 1
+    elif ch.islower():
+        lower += 1
+
+print("Uppercase letters:", upper)
+print("Lowercase letters:", lower)
+#33)
+s = input("Enter a string: ")
+
+letters = 0
+digits = 0
+
+for ch in s:
+    if ch.isalpha():
+        letters += 1
+    elif ch.isdigit():
+        digits += 1
+
+print("Letters:", letters)
+print("Digits:", digits)
+#34)
+char_list = ['P', 'y', 't', 'h', 'o', 'n']
+
+result = "".join(char_list)
+print("String:", result)
+#35)
+x = input("Enter something: ")
+
+if isinstance(x, str):
+    print("It is a string")
+else:
+    print("It is NOT a string")
+#36)
+text = input("Enter a sentence: ")
+word = input("Enter word to count: ")
+
+count = text.split().count(word)
+print("Occurrence:", count)
+#37)
+text = input("Enter main string: ")
+pattern = input("Enter pattern to search: ")
+
+if pattern in text:
+    print("Pattern found")
+else:
+    print("Pattern not found")
+#38)
+s = input("Enter a string: ")
+i = int(input("Enter position to remove: "))
+
+if i < 0 or i >= len(s):
+    print("Invalid index")
+else:
+    result = s[:i] + s[i+1:]
+    print("After removal:", result)
+#39)
+s = input("Enter a string: ")
+
+# Method 1
+print("Length using len():", len(s))
+
+# Method 2
+count = 0
+for ch in s:
+    count += 1
+print("Length using loop:", count)
+#40)
+s = input("Enter a string: ").lower()
+
+if all(vowel in s for vowel in "aeiou"):
+    print("String contains all vowels")
+else:
+    print("String does NOT contain all vowels")
+#41)
+s = input("Enter a string: ")
+
+result = ""
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print("After removing duplicates:", result)
+#42)
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+if sorted(s1) == sorted(s2):
+    print("Anagrams")
+else:
+    print("Not Anagrams")
+#43)
+s = input("Enter a string: ")
+
+result = s.replace(" ", "")
+print("Without spaces:", result)
+#44)
+s = input("Enter a sentence: ")
+words = s.split()
+
+largest = max(words, key=len)
+print("Largest word:", largest)
+#45)
+s = input("Enter a string: ")
+
+print("Uppercase:", s.upper())
+print("Lowercase:", s.lower())
+#46)
+s = input("Enter a string: ")
+
+count = 0
+for ch in s:
+    if not ch.isalnum() and not ch.isspace():
+        count += 1
+
+print("Special characters:", count)
+#47)
+s = input("Enter a string: ")
+
+for ch in s:
+    if s.count(ch) == 1:
+        print("First non-repeating character:", ch)
+        break
+else:
+    print("No non-repeating character found")
